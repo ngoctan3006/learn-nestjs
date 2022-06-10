@@ -1,0 +1,12 @@
+@baseUrl = http://localhost:5000
+
+# @name signup
+POST {{baseUrl}}/auth/signup
+Content-Type: application/json
+
+###
+
+# @name signin
+POST {{baseUrl}}/auth/signin
+Content-Type: application/json
+
