@@ -5,7 +5,7 @@ POST {{baseUrl}}/auth/signup
 Content-Type: application/json
 
 {
-  "email": "tan03@gmail.com",
+  "email": "tan01@gmail.com",
   "password": "123456"
 }
 
@@ -14,4 +14,9 @@ Content-Type: application/json
 # @name signin
 POST {{baseUrl}}/auth/signin
 Content-Type: application/json
+
+{
+  "email": "tan01@gmail.com",
+  "password": "123456"
+}
 
