@@ -20,3 +20,9 @@ Content-Type: application/json
   "password": "123456"
 }
 
+###
+
+# @name getMe
+GET {{baseUrl}}/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGFuMDFAZ21haWwuY29tIiwiaWF0IjoxNjU1NzEwMDc1LCJleHAiOjE2NTU3MTA5NzV9.DWUZLuCDiWZ6NcKCn2XMt_-LQ8m0YXT9QxkCRyLEB3Y
+
