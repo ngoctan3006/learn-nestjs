@@ -24,5 +24,5 @@ Content-Type: application/json
 
 # @name getMe
 GET {{baseUrl}}/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGFuMDFAZ21haWwuY29tIiwiaWF0IjoxNjU1NzEwMDc1LCJleHAiOjE2NTU3MTA5NzV9.DWUZLuCDiWZ6NcKCn2XMt_-LQ8m0YXT9QxkCRyLEB3Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGFuMDFAZ21haWwuY29tIiwiaWF0IjoxNjU1NzE0NzY1LCJleHAiOjE2NTU3MTU2NjV9.wkmjoKKt7ieE05bDMhnOIJ9SXaF-QRu6akFdriTvBfA
 
