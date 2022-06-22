@@ -1,3 +1,4 @@
+import { EditUserDto } from './../src/user/dto/edit-user.dto';
 import { AuthDto } from './../src/auth/dto';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
@@ -106,7 +107,26 @@ describe('App e2e', () => {
       });
     });
 
-    describe('Edit user', () => {});
+    describe('Edit user', () => {
+      it('should edit user', () => {
+        const dto: EditUserDto = {
+          firstName: 'Tan',
+          lastName: 'Nguyen',
+          email: 'tan001@gmail.com',
+        };
+
+        return pactum
+          .spec()
+          .patch('/users')
+          .withHeaders({
+            Authorization: 'Bearer $S{userAt}',
+          })
+          .withBody(dto)
+          .expectStatus(200)
+          .inspect()
+          .expectBodyContains(dto.email);
+      });
+    });
   });
 
   describe('Bookmark', () => {
