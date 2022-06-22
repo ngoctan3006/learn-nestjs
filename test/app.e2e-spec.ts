@@ -1,3 +1,4 @@
+import { CreateBookmarkDto } from './../src/bookmark/dto/create-bookmark.dto';
 import { EditUserDto } from './../src/user/dto/edit-user.dto';
 import { AuthDto } from './../src/auth/dto';
 import { INestApplication, ValidationPipe } from '@nestjs/common';
@@ -130,11 +131,40 @@ describe('App e2e', () => {
   });
 
   describe('Bookmark', () => {
-    describe('Create bookmark', () => {});
+    describe('Get empty bookmark', () => {
+      it('should get bookmarks', () => {
+        return pactum
+          .spec()
+          .get('/bookmarks')
+          .withHeaders({
+            Authorization: 'Bearer $S{userAt}',
+          })
+          .expectStatus(200)
+          .expectBody([]);
+      });
+    });
 
-    describe('Get bookmark', () => {});
+    describe('Get bookmarks', () => {});
 
     describe('Get bookmark by id', () => {});
+
+    describe('Create bookmark', () => {
+      const dto: CreateBookmarkDto = {
+        title: 'First Bookmark',
+        link: 'https://youtu.be/GHTA143_b-s',
+      };
+
+      it('should create bookmark', () => {
+        return pactum
+          .spec()
+          .post('/bookmarks')
+          .withHeaders({
+            Authorization: 'Bearer $S{userAt}',
+          })
+          .withBody(dto)
+          .expectStatus(201);
+      });
+    });
 
     describe('Edit bookmark', () => {});
 
